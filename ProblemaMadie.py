@@ -26,8 +26,8 @@ totazucar = lbazucar * precio_azucar
 subtotal = totarroz + totazucar + totfrijol
 iva = subtotal* 0.12
 siniva = subtotal - iva
-if subtotal > 15:
-    descuento = subtotal * 0.25
+if subtotal > 15 and (lbarroz < 10 and lbfrijol < 5 ):
+    descuento = subtotal * 0.025
     total = subtotal - descuento
     print('El monto a pagar sin iva es de: Q.',siniva)
     print('El monto a pagar de iva es de: Q.',iva)
